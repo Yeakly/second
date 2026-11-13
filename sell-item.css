@@ -1,0 +1,943 @@
+/* =========================================
+   TAOMALL SELL ITEM PAGE STYLES
+========================================= */
+
+:root {
+    --primary: #dc6900;
+    --primary-dark: #b95500;
+    --dark: #221d1b;
+    --text: #68645f;
+    --light: #fef1ed;
+    --white: #ffffff;
+    --border: #e5e7eb;
+    --soft: #f0e3df;
+    --shadow: 0 8px 28px rgba(35, 30, 25, 0.07);
+
+    --fee-negative: #e0301e;
+}
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    min-height: 82px;
+    margin: auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.main-nav a {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary);
+}
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header-actions a {
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+}
+
+.header-actions a:hover {
+    color: var(--primary);
+}
+
+.header-actions .material-symbols-outlined {
+    font-size: 22px;
+}
+
+/* PAGE INTRO */
+
+.sell-page {
+    background: var(--light);
+    min-height: 100vh;
+    padding-bottom: 75px;
+}
+
+.sell-intro {
+    background: var(--white);
+    padding: 45px 28px 35px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sell-container {
+    max-width: 1160px;
+    margin: auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.back-link .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.eyebrow {
+    display: block;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sell-intro h1 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    margin: 8px 0;
+}
+
+.sell-intro > .sell-container > p {
+    color: var(--text);
+    font-size: 13px;
+    max-width: 600px;
+}
+
+/* PROGRESS STEPS */
+
+.progress-steps {
+    display: flex;
+    align-items: center;
+    max-width: 750px;
+    margin-top: 35px;
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.step > span {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ACTIVE STEP CIRCLE */
+
+.step.active > span {
+    color: var(--white);
+    background: #dc6900;
+}
+
+/* COMPLETED STEP */
+
+.step.completed > span {
+    color: var(--white);
+    background: #dc6900;
+}
+
+.step strong,
+.step small {
+    display: block;
+}
+
+.step strong {
+    font-size: 11px;
+}
+
+.step small {
+    color: var(--text);
+    font-size: 9px;
+}
+
+/* CONNECTING LINES */
+
+.step-line {
+    flex: 1;
+    height: 1px;
+    min-width: 20px;
+    background: #f0e3df;
+}
+
+/* MAIN LAYOUT */
+
+.sell-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    align-items: start;
+    gap: 25px;
+    padding-top: 35px;
+}
+
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-card,
+.preview-card,
+.tips-card,
+.help-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 25px;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.card-number {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.card-heading h2 {
+    font-size: 20px;
+    margin-top: 4px;
+    letter-spacing: -0.5px;
+}
+
+.card-heading p {
+    color: var(--text);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* FORM ELEMENTS */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    color: var(--dark);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    font-size: 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group textarea {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(220, 105, 0, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa49d;
+}
+
+.form-group > small {
+    display: block;
+    color: var(--text);
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+/* CONDITION OPTIONS */
+
+.condition-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.condition-option {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.condition-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.condition-option span {
+    display: block;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.condition-option strong,
+.condition-option small {
+    display: block;
+}
+
+.condition-option strong {
+    font-size: 11px;
+}
+
+.condition-option small {
+    color: var(--text);
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.condition-option:hover span {
+    border-color: var(--primary);
+}
+
+/* ACTIVE CONDITION PILL */
+
+.condition-option input:checked + span {
+    background: #fef1ed;
+    border: 1px solid #dc6900;
+    color: #dc6900;
+}
+
+.condition-option input:checked + span::after {
+    content: "✓";
+    float: right;
+    color: #dc6900;
+    font-weight: 800;
+}
+
+/* PHOTO UPLOAD */
+
+.upload-area {
+    min-height: 190px;
+    border: 1.5px dashed #d8c6bb;
+    background: #fcfaf7;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+}
+
+.upload-area:hover {
+    border-color: var(--primary);
+    background: #fef1ed;
+}
+
+.upload-area > .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 38px;
+}
+
+.upload-area strong {
+    font-size: 12px;
+}
+
+.upload-area small {
+    color: var(--text);
+    font-size: 10px;
+}
+
+.upload-button {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+#photos {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.photo-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.photo-preview img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.form-help {
+    display: block;
+    color: var(--text);
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+/* DESCRIPTION COUNTER */
+
+.character-count {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 8px;
+    color: var(--text);
+    font-size: 10px;
+}
+
+.character-count b {
+    color: var(--primary);
+}
+
+/* PRICING */
+
+.input-with-prefix {
+    position: relative;
+}
+
+.input-with-prefix > span {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text);
+    font-size: 12px;
+}
+
+.input-with-prefix input {
+    padding-left: 29px;
+}
+
+/* NET DIRECT DEPOSIT PAYOUT BOX */
+
+.payout-box {
+    background: #fef1ed;
+    border: 1px solid #f0e3df;
+    border-radius: 7px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.payout-box div {
+    display: flex;
+    flex-direction: column;
+}
+
+.payout-box strong {
+    font-size: 13px;
+    color: var(--dark);
+}
+
+.payout-box small {
+    color: var(--text);
+    font-size: 9px;
+    margin-top: 4px;
+}
+
+.payout-box > strong {
+    color: #dc6900;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* NEGATIVE FEE DEDUCTIONS */
+
+.fee-deduction,
+.fee-amount,
+.negative-fee {
+    color: #e0301e;
+}
+
+/* FORM BUTTONS */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.button {
+    min-height: 47px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* CONTINUE BUTTON */
+
+.button-primary {
+    color: var(--white);
+    background: #dc6900;
+    border: 1px solid #dc6900;
+}
+
+.button-primary:hover {
+    background: #b95500;
+    border-color: #b95500;
+}
+
+.button-primary .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.cancel-button {
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.cancel-button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.form-message {
+    color: var(--primary-dark);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* RIGHT SIDEBAR */
+
+.sell-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    position: sticky;
+    top: 105px;
+}
+
+.preview-card h2 {
+    font-size: 19px;
+    margin: 5px 0 17px;
+}
+
+.preview-image {
+    height: 205px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 7px;
+    color: #aaa49d;
+    overflow: hidden;
+}
+
+.preview-image > .material-symbols-outlined {
+    font-size: 38px;
+}
+
+.preview-image small {
+    font-size: 10px;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-details {
+    padding-top: 15px;
+}
+
+.preview-details > span {
+    font-size: 9px;
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.preview-details h3 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.preview-details p {
+    color: var(--text);
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+
+.preview-details > strong {
+    display: block;
+    font-size: 22px;
+    color: var(--primary);
+}
+
+.preview-details > small {
+    display: block;
+    color: var(--text);
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+/* TIPS CARD */
+
+.tips-card {
+    background: #fef1ed;
+    border-color: #f0e3df;
+}
+
+.tips-card > .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.tips-card h3 {
+    font-size: 14px;
+    margin: 5px 0 12px;
+}
+
+.tips-card ul {
+    padding-left: 17px;
+}
+
+.tips-card li {
+    color: var(--text);
+    font-size: 10px;
+    margin-bottom: 9px;
+    line-height: 1.7;
+}
+
+/* HELP CARD */
+
+.help-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.help-card > .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.help-card strong {
+    font-size: 12px;
+}
+
+.help-card p {
+    color: var(--text);
+    font-size: 10px;
+    margin: 4px 0 8px;
+}
+
+.help-card a {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #ffffff;
+    padding: 55px 28px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-brand p {
+    max-width: 280px;
+    color: #bbb5ae;
+    font-size: 12px;
+    margin-top: 13px;
+    line-height: 1.8;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-column h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #bbb5ae;
+    font-size: 11px;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 45px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid #46423d;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #aaa49d;
+    font-size: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .sell-layout {
+        grid-template-columns: minmax(0, 1fr) 270px;
+        gap: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sell-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-container {
+        gap: 15px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .sell-intro {
+        padding: 30px 20px;
+    }
+
+    .sell-intro h1 {
+        font-size: 29px;
+    }
+
+    .progress-steps {
+        gap: 8px;
+    }
+
+    .step {
+        gap: 6px;
+    }
+
+    .step strong {
+        font-size: 9px;
+    }
+
+    .step small {
+        display: none;
+    }
+
+    .step-line {
+        min-width: 8px;
+    }
+
+    .sell-layout {
+        grid-template-columns: 1fr;
+        padding: 25px 15px;
+    }
+
+    .sell-sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .preview-card {
+        grid-column: 1 / -1;
+    }
+
+    .form-card {
+        padding: 19px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .sell-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card {
+        grid-column: auto;
+    }
+
+    .condition-options {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .button {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}

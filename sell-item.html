@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell an Item | SeCondary</title>
+    <link rel="stylesheet" href="sell-item.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER: SAME AS HOMEPAGE -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Se<span>Condary</span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Browse Products</a>
+                <a href="sell-item.html" class="active">Sell an Item</a>
+                <a href="index.html#messages">Messages</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Notifications">
+                    <span class="material-symbols-outlined">notifications</span>
+                </a>
+                <a href="#" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+                <a href="#" aria-label="My account">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="sell-page">
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="sell-intro">
+            <div class="sell-container">
+                <a href="index.html" class="back-link">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Back to Homepage
+                </a>
+
+                <span class="eyebrow">SECONDARY SELLER CENTER</span>
+                <h1>List an Item for Sale</h1>
+                <p>
+                    Give your items a new home. Add your product details,
+                    set your price, and get ready to reach new buyers.
+                </p>
+
+                <div class="progress-steps">
+                    <div class="step active">
+                        <span>1</span>
+                        <div>
+                            <strong>Item Details</strong>
+                            <small>Describe your product</small>
+                        </div>
+                    </div>
+
+                    <div class="step-line"></div>
+
+                    <div class="step">
+                        <span>2</span>
+                        <div>
+                            <strong>Pricing</strong>
+                            <small>Set your price</small>
+                        </div>
+                    </div>
+
+                    <div class="step-line"></div>
+
+                    <div class="step">
+                        <span>3</span>
+                        <div>
+                            <strong>Publish</strong>
+                            <small>Review your listing</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELLING FORM -->
+        <section class="sell-container sell-layout">
+
+            <form class="sell-form" id="sellForm">
+
+                <!-- ITEM INFORMATION -->
+                <div class="form-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-number">01</span>
+                            <h2>Item Information</h2>
+                            <p>Tell buyers what you are selling.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemName">Product Name <span>*</span></label>
+                        <input
+                            type="text"
+                            id="itemName"
+                            name="itemName"
+                            placeholder="e.g. Classic Leather Shoulder Bag"
+                            maxlength="80"
+                            required>
+                        <small>Choose a clear name that buyers can easily understand.</small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category">Category <span>*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Select category</option>
+                                <option>Fashion</option>
+                                <option>Electronics</option>
+                                <option>Home & Living</option>
+                                <option>Books & Stationery</option>
+                                <option>Beauty & Personal Care</option>
+                                <option>Sports & Outdoors</option>
+                                <option>Lifestyle</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="brand">Brand</label>
+                            <input
+                                type="text"
+                                id="brand"
+                                name="brand"
+                                placeholder="Enter brand name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Product Condition <span>*</span></label>
+
+                        <div class="condition-options">
+                            <label class="condition-option">
+                                <input type="radio" name="condition" value="Brand New" required>
+                                <span>
+                                    <strong>Brand New</strong>
+                                    <small>Unused, original condition</small>
+                                </span>
+                            </label>
+
+                            <label class="condition-option">
+                                <input type="radio" name="condition" value="Like New">
+                                <span>
+                                    <strong>Like New</strong>
+                                    <small>Almost no signs of use</small>
+                                </span>
+                            </label>
+
+                            <label class="condition-option">
+                                <input type="radio" name="condition" value="Good">
+                                <span>
+                                    <strong>Good</strong>
+                                    <small>Minor signs of use</small>
+                                </span>
+                            </label>
+
+                            <label class="condition-option">
+                                <input type="radio" name="condition" value="Fair">
+                                <span>
+                                    <strong>Fair</strong>
+                                    <small>Visible signs of use</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT PHOTOS -->
+                <div class="form-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-number">02</span>
+                            <h2>Product Photos</h2>
+                            <p>Show buyers exactly what they are getting.</p>
+                        </div>
+                    </div>
+
+                    <label class="upload-area" for="photos">
+                        <span class="material-symbols-outlined">cloud_upload</span>
+                        <strong>Click to upload product photos</strong>
+                        <small>PNG, JPG or WEBP. Maximum 5 MB per image.</small>
+                        <span class="upload-button">Choose Photos</span>
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photos"
+                        name="photos"
+                        accept="image/png,image/jpeg,image/webp"
+                        multiple>
+
+                    <div class="photo-preview" id="photoPreview"></div>
+                    <small class="form-help">Add clear photos from different angles.</small>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="form-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-number">03</span>
+                            <h2>Product Description</h2>
+                            <p>Help buyers understand your item's features and details.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description <span>*</span></label>
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="6"
+                            maxlength="1000"
+                            placeholder="Describe your product, its features, size, color, and any important details..."
+                            required></textarea>
+
+                        <div class="character-count">
+                            <span>Be honest and specific about the product.</span>
+                            <span><b id="charCount">0</b>/1000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div class="form-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-number">04</span>
+                            <h2>Pricing & Quantity</h2>
+                            <p>Choose a price that works for you and your buyers.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Selling Price (USD) <span>*</span></label>
+                            <div class="input-with-prefix">
+                                <span>$</span>
+                                <input
+                                    type="number"
+                                    id="price"
+                                    name="price"
+                                    min="0.01"
+                                    step="0.01"
+                                    placeholder="0.00"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Available Quantity <span>*</span></label>
+                            <input
+                                type="number"
+                                id="quantity"
+                                name="quantity"
+                                min="1"
+                                value="1"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="payout-box">
+                        <div>
+                            <strong>Estimated Seller Payout</strong>
+                            <small>Example calculation with a 10% marketplace fee.</small>
+                        </div>
+                        <strong id="payout">$0.00</strong>
+                    </div>
+                </div>
+
+                <!-- SHIPPING -->
+                <div class="form-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-number">05</span>
+                            <h2>Shipping Information</h2>
+                            <p>Tell buyers how the item will be delivered.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Your Location <span>*</span></label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="e.g. Phnom Penh, Cambodia"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shipping">Shipping Method <span>*</span></label>
+                        <select id="shipping" name="shipping" required>
+                            <option value="">Select shipping method</option>
+                            <option>Standard Delivery</option>
+                            <option>Express Delivery</option>
+                            <option>Local Pickup</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="index.html" class="button cancel-button">Cancel</a>
+                    <button type="submit" class="button button-primary">
+                        Review My Listing
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+
+                <p class="form-message" id="formMessage" aria-live="polite"></p>
+
+            </form>
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="sell-sidebar">
+
+                <div class="preview-card">
+                    <span class="eyebrow">LIVE PREVIEW</span>
+                    <h2>Your Listing</h2>
+
+                    <div class="preview-image" id="previewImage">
+                        <span class="material-symbols-outlined">image</span>
+                        <small>Your product photo will appear here</small>
+                    </div>
+
+                    <div class="preview-details">
+                        <span id="previewCategory">YOUR CATEGORY</span>
+                        <h3 id="previewTitle">Your product name</h3>
+                        <p id="previewCondition">Product condition will appear here</p>
+                        <strong id="previewPrice">$0.00</strong>
+                        <small id="previewLocation">Your location</small>
+                    </div>
+                </div>
+
+                <div class="tips-card">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <h3>Seller Tips</h3>
+
+                    <ul>
+                        <li>Use a clear and descriptive product title.</li>
+                        <li>Upload bright, high-quality photos.</li>
+                        <li>Describe the product honestly.</li>
+                        <li>Set a competitive and reasonable price.</li>
+                        <li>Respond to buyer questions promptly.</li>
+                    </ul>
+                </div>
+
+                <div class="help-card">
+                    <span class="material-symbols-outlined">support_agent</span>
+                    <div>
+                        <strong>Need Help?</strong>
+                        <p>Have questions about listing your product?</p>
+                        <a href="#">Contact Seller Support →</a>
+                    </div>
+                </div>
+
+            </aside>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: SAME AS HOMEPAGE -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Se<span>Condary</span></a>
+                <p>A New Home for Old Things.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping</h3>
+                <a href="index.html#categories">Categories</a>
+                <a href="index.html#products">Featured Products</a>
+                <a href="index.html#products">New Arrivals</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Sellers</h3>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="sell-item.html">Start Selling</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 SeCondary. All rights reserved.</p>
+            <p>Made for better shopping experiences.</p>
+        </div>
+    </footer>
+
+    <!-- SMALL JAVASCRIPT FOR FORM PREVIEW -->
+    <script>
+        const itemName = document.getElementById("itemName");
+        const category = document.getElementById("category");
+        const price = document.getElementById("price");
+        const description = document.getElementById("description");
+        const locationInput = document.getElementById("location");
+        const photoInput = document.getElementById("photos");
+
+        const previewTitle = document.getElementById("previewTitle");
+        const previewCategory = document.getElementById("previewCategory");
+        const previewPrice = document.getElementById("previewPrice");
+        const previewLocation = document.getElementById("previewLocation");
+        const previewCondition = document.getElementById("previewCondition");
+        const previewImage = document.getElementById("previewImage");
+
+        function updatePreview() {
+            previewTitle.textContent =
+                itemName.value.trim() || "Your product name";
+
+            previewCategory.textContent =
+                category.value || "YOUR CATEGORY";
+
+            previewPrice.textContent =
+                "$" + (Number(price.value) || 0).toFixed(2);
+
+            previewLocation.textContent =
+                locationInput.value.trim() || "Your location";
+
+            const selectedCondition =
+                document.querySelector('input[name="condition"]:checked');
+
+            previewCondition.textContent =
+                selectedCondition ? selectedCondition.value : "Product condition will appear here";
+
+            document.getElementById("charCount").textContent =
+                description.value.length;
+
+            const sellingPrice = Number(price.value) || 0;
+            const sellerPayout = sellingPrice * 0.90;
+
+            document.getElementById("payout").textContent =
+                "$" + sellerPayout.toFixed(2);
+        }
+
+        [itemName, category, price, description, locationInput].forEach(function(field) {
+            field.addEventListener("input", updatePreview);
+            field.addEventListener("change", updatePreview);
+        });
+
+        document.querySelectorAll('input[name="condition"]').forEach(function(input) {
+            input.addEventListener("change", updatePreview);
+        });
+
+        // Show selected product photos.
+        photoInput.addEventListener("change", function() {
+            const preview = document.getElementById("photoPreview");
+            preview.innerHTML = "";
+
+            Array.from(photoInput.files).slice(0, 8).forEach(function(file) {
+                if (!file.type.startsWith("image/")) return;
+
+                if (file.size > 5 * 1024 * 1024) {
+                    alert(file.name + " is larger than 5 MB.");
+                    return;
+                }
+
+                const image = document.createElement("img");
+                image.src = URL.createObjectURL(file);
+                image.alt = "Selected product photo";
+                preview.appendChild(image);
+            });
+
+            const firstFile = photoInput.files[0];
+
+            if (firstFile && firstFile.type.startsWith("image/") &&
+                firstFile.size <= 5 * 1024 * 1024) {
+                previewImage.innerHTML = "";
+                const image = document.createElement("img");
+                image.src = URL.createObjectURL(firstFile);
+                image.alt = "Product preview";
+                previewImage.appendChild(image);
+            }
+        });
+
+        // Demo form submission.
+        document.getElementById("sellForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!this.reportValidity()) return;
+
+            document.getElementById("formMessage").textContent =
+                "Your listing information is ready for review! This is a front-end demo; it has not been published or saved.";
+        });
+
+        updatePreview();
+    </script>
+
+</body>
+</html>
