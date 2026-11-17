@@ -1,0 +1,39 @@
+
+:root {
+  /* Brand Core Palette */
+  --brand-primary: #dc6900;           /* rgb(220, 105, 0) - Primary CTAs, active states, step indicators */
+  --brand-primary-hover: #c65e00;     /* Darker hover state for primary interactive elements */
+  --brand-secondary: #eb8c00;         /* rgb(235, 140, 0) - Warm highlight, ratings, progress bars */
+  --brand-accent-red: #e0301e;        /* rgb(224, 48, 30) - Unread badges, sale tags, fee deductions */
+  --brand-crimson: #a32020;           /* rgb(163, 32, 32) - Alert borders, urgent indicators */
+  --brand-dark-crimson: #602320;      /* rgb(96, 35, 32) - High-contrast text, promotional banner text */
+
+  /* Neutral & Surface Foundations */
+  --surface-base: #fff8f6;            /* Global page background (warm off-white/light cream) */
+  --surface-dim: #e4d7d4;             /* Inactive wells, muted surfaces */
+  --surface-bright: #fff8f6;          /* Clean canvas background */
+  --surface-card: #ffffff;            /* Pure white elevated cards, modules, modals */
+  --surface-pill: #fef1ed;            /* Subtle warm peach tint for badge fills, chips, message bubbles */
+  --surface-hover: #fce8e1;           /* Interactive container hover state */
+
+  /* Typography & Content Colors */
+  --text-primary: #1a1a1a;            /* High-contrast charcoal/black headings and body */
+  --text-secondary: #6e6562;          /* Muted metadata, timestamps, secondary labels */
+  --text-tertiary: #9ca3af;           /* Inactive/placeholder text */
+  --text-on-primary: #ffffff;         /* Pure white text on primary CTA buttons */
+
+  /* Borders & Dividers */
+  --border-subtle: #f0e3df;           /* Soft warm dividers and card outlines */
+  --border-default: #e5e7eb;          /* Standard structural border */
+  --border-focus: #dc6900;            /* Focus ring / selected card border */
+
+  /* Semantic Feedback States */
+  --status-success-bg: #f0fdf4;       /* Delivered tag, verified badge background */
+  --status-success-text: #16a34a;     /* Delivered, 2FA protected text */
+  --status-warning-bg: #fffbeb;       /* Caution status background */
+  --status-warning-text: #d97706;     /* Caution status text */
+  --status-error-bg: #fef2f2;         /* Cancelled/alert background */
+  --status-error-text: #dc2626;       /* Cancelled/alert text */
+}
+
+
