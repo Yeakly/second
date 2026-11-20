@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Se<span>Condary</span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Browse Products</a>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="chat.html">Messages</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Notifications">
+                    <span class="material-symbols-outlined">notifications</span>
+                </a>
+                <a href="#" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+                <a href="user.html" aria-label="My account">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="section2">
+        <section id="info-set">
+            <div id="set1">
+                <img src="profileimg/pro1.jpg">
+                <h4>Welcome, meow</h4>
+            </div>
+            <section id="set2">
+                <ul class="menu-item">
+                    <li><a href="user.html" class="active" aria-current="page">Overview</a></li>
+                    <li><a href="orders.html" >Orders</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="address.html" >Addresses</a></li>
+                    <li><a href="Setting.html" >Settings</a></li>
+                </ul>
+            </section>
+            
+        </section>
+        <section id="order-hero" aria-labelledby="overview-heading">
+            <div id="order-hero-header">
+                <h2 id="overview-heading">Overview</h2>
+                <p>Manage your account snapshot, recent activity and quick preferences</p>
+            </div
+            >
+            <div id="stat-grid">
+                <div class="stat-card">
+                    <div>Active Orders <span>▣</span></div>
+                    <strong>2 In Transit</strong>
+                    <a href="#">Track packages </a>
+                </div>
+                <div class="stat-card">
+                    <div>Saved Wishlist <span>▣</span></div>
+                    <strong>3 Items</strong>
+                    <a href="#">1 item on price drop </a>
+                </div>
+                <div class="stat-card">
+                    <div>Default <Address></Address> <span>▣</span></div>
+                    <strong>Phnom Penh</strong>
+                    <a href="#">Primary Shipping destination </a>
+                </div>
+                <div class="stat-card">
+                    <div>Security & Auth <span>▣</span></div>
+                    <strong>Protected</strong>
+                    <a href="#">● 2FA Active · Password current </a>
+                </div>
+            </div>
+            <section id="order-preview">
+                <div id="recent-order">
+                    <div id="recent-order-header">
+                        <div>
+                            <h4>Recent Order Snapshot <span class="tag-orange">In Transit</span></h4>
+                            <p class="tag-small">Placed on Oct 12, 2026 Order #20261012-882910</p>
+                        </div>
+                        <div><strong>$148.00</strong></div>
+                    </div>
+                    <div id="order-info">
+                        <div class="order-img">
+                            <img src="image/anker.jpg">
+                        </div>
+                        <div id="product-info">
+                            <strong>Anker Soundcore Space One Pro</strong>
+                            <p class="tag-small">Color:Midnight Black Active Noise Cancelling Qty:1</p>
+                            <p class="orange-text">Estimated delivery: Tomorrow, Oct 14 by 7 PM</p>
+                        </div>
+                    </div>
+                    <div id="tracking">
+                        <div id="view-details-btn">
+                            <p>View Details</p>
+                        </div>
+                        <div id="track-order-btn">
+                            <p>Track Order</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="wishlist">
+                    <div id="wishlist-header">
+                        <h4>Saved wishlist  <span>3</span></h4>
+                        <p class="orange-text">View All</p>
+                    </div>
+                    <div class="wishlist-info">
+                        <div class="wishlist-img">
+                            <img src="image/bag.jpg">
+                        </div>
+                        <div class="wishlist-product-info">
+                            <strong>red velvel leather bag with keychains</strong>
+                           <p>$165.00</p>
+                        </div>
+                        <button class="addcart"><img src="image/shopping-cart.png"></button>
+                    </div>
+                    <div class="wishlist-info">
+                        <div class="wishlist-img">
+                            <img src="image/watch.jpg">
+                        </div>
+                        <div class="wishlist-product-info">
+                            <strong>silver womon watch</strong>
+                           <p>$220.00</p>
+                        </div>
+                        <button class="addcart"><img src="image/shopping-cart.png"></button>
+                    </div>
+                    <div class="wishlist-info">
+                        <div class="wishlist-img">
+                            <img src="image/boot.jpg">
+                        </div>
+                        <div class="wishlist-product-info">
+                            <strong>brown leather high boots</strong>
+                           <p>$120.00</p>
+                        </div>
+                        <button class="addcart"><img src="image/shopping-cart.png"></button>
+                    </div>
+                </div>
+            </section>
+            <section id="last-section">
+                <div id="order-history">
+                    <div id="order-history-header">
+                        <h4>Recent purchase history</h4>
+                        <p class="orange-text">View all orders</p>
+                    </div>
+                    <div class="history-product">
+                        <div class="history-product-info">
+                            <div class="history-img">
+                                <img src="image/coffee.jpg">
+                            </div>
+                            <div class="history-product-text">
+                                <p>Fellow Ode Gen 2 Coffee Grinder</p>
+                                <p class="tag-small">Delivered Sep 21 · Order #20260921-994318</p>
+                            </div>
+                        </div>
+                        <div class="history-status">
+                            <p class="bold">$345.00</p>
+                            <p class="green-tag">Delivered</p>
+                        </div>
+                    </div>
+                    <div class="history-product">
+                        <div class="history-product-info">
+                            <div class="history-img">
+                                <img src="image/keyboard.jpg">
+                            </div>
+                            <div class="history-product-text">
+                                <p>Keychron Q1 Pro Mechanical Keyboard</p>
+                                <p class="tag-small">Delivered Oct 04 · Order #20261004-118420</p>
+                            </div>
+                        </div>
+                        <div class="history-status">
+                            <p class="bold">$198.00</p>
+                            <p class="green-tag">Delivered</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact-info">
+                    <div id="default-ship">
+                        <div id="default-ship-header">
+                            <h4>Default shipping</h4>
+                            <p class="orange-text">Manage</p>
+                        </div>
+                        <div id="address-info">
+                            <Strong>meow</Strong>
+                            <p class="tag-small">742 Montgomery St, Apt 4B</p>
+                            <p class="tag-small">San Francisco, CA 94111, United States</p>
+                            <p class="tag-small">+1 (415) 882-9014</p>
+                        </div>
+                        <div id="bill-confirm">
+                            <p>Billing matches shipping address</p>
+                            <div>✅</div>
+                        </div>
+                    </div>
+                    <div id="help-contact">
+                        <h5>Need help with an order?</h5>
+                        <p class="tag-small">Our dedicated concierge is available 24/7 for returns, claims, or general questions.</p>
+                        <div id="btn">
+                            <button id="contact-btn">Contact Care</button>
+                            <button id="faq-btn">Read FAQs</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>     
+    </section>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Se<span>Condary</span></a>
+                <p>A New Home for Old Things.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping</h3>
+                <a href="index.html#categories">Categories</a>
+                <a href="index.html#products">Featured Products</a>
+                <a href="index.html#products">New Arrivals</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Sellers</h3>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="sell-item.html">Start Selling</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 SeCondary. All rights reserved.</p>
+            <p>Made for better shopping experiences.</p>
+        </div>
+    </footer>
+</body>
+</html>

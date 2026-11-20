@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chat1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Se<span>Condary</span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Browse Products</a>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="chat.html" class="active" aria-current="page">Messages</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Notifications">
+                    <span class="material-symbols-outlined">notifications</span>
+                </a>
+                <a href="#" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+                <a href="user.html" aria-label="My account">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="chat-hero">
+        <section id="chat-list-container">
+            <div id="chat-list-header">
+                <img>
+                <p>Chat list</p>
+            </div>
+            <div id="search-container">
+                <form id="chat-search">
+                    <span>⌕</span>
+                    <input type="text" class="search-input" placeholder="Search recent contacts">
+                </form>
+            </div>
+
+            <div id="chat-list">   
+                <div class="chat active" role="button" tabindex="0" aria-pressed="true">
+                    <div class="chat-info">
+                        <img src="profileimg/pro1.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">meow</p>
+                            <p class="chat-last-message">Hello</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro2.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">chichi</p>
+                            <p class="chat-last-message">Discount?</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro3.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">lolo</p>
+                            <p class="chat-last-message">Is it still usable?</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro4.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">billy</p>
+                            <p class="chat-last-message">More discount?</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro5.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">noone</p>
+                            <p class="chat-last-message">How long have you used this?</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro6.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">kiki</p>
+                            <p class="chat-last-message">Do you have more then two?</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro7.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">vivi</p>
+                            <p class="chat-last-message">Hello</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro8.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">tity</p>
+                            <p class="chat-last-message">Hello</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>
+
+                <div class="chat" role="button" tabindex="0" aria-pressed="false">
+                    <div class="chat-info">
+                        <img src="profileimg/pro9.jpg">
+                        <div class="chat-details">
+                            <p class="chat-name">Mimi</p>
+                            <p class="chat-last-message">Hello</p>
+                        </div>
+                    </div>
+                    <time>15:06</time>
+                </div>      
+            </div>
+        </section>
+
+        <section id="chat-display-container">
+            
+            <div id="chat-header">
+                <button type="button" id="chat-back-button" aria-label="Back to chat list">‹</button>
+                <h3>meow</h3>
+            </div>
+
+            <div id="chat-space">
+                <div class="message received">
+                    <img src="profileimg/pro1.jpg">
+                    <div class="message-content">
+                        <p>Hello</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-text">
+                <div id="chat-toolbar">
+                    <button type="button" class="chat-icon">
+                        <img src="./image/happiness.png" alt="Emoji">
+                    </button>
+
+                    <label for="image-upload" class="chat-icon" title="Upload image">
+                        <img src="./image/photo.png" alt="Photo">
+                    </label>
+                    <input type="file" id="image-upload" accept="image/*" hidden>
+
+                    <label for="file-upload" class="chat-icon" title="Upload file">
+                        <img src="./image/file.png" alt="File">
+                    </label>
+                    <input type="file" id="file-upload" hidden>     
+                </div>
+
+                <textarea placeholder="Please enter your message..."></textarea>
+
+                <div id="chat-footer">
+
+                    <div id="send-container">
+                        <span>0 / 500</span>
+                        <button type="button" id="send-button">
+                            send <span>▼</span>
+                        </button>
+                    </div>
+                </div>
+            </div>           
+        </section>
+        <section id="chat-store">
+
+            <div id="store-card">
+                <img src="profileimg/pro1.jpg" alt="Store Image">
+                <div>
+                    <h3>muva official</h3>
+                    <button type="button">Enter</button>
+                </div>
+            </div>
+
+        </section>
+        </section>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Se<span>Condary</span></a>
+                <p>A New Home for Old Things.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping</h3>
+                <a href="index.html#categories">Categories</a>
+                <a href="index.html#products">Featured Products</a>
+                <a href="index.html#products">New Arrivals</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Sellers</h3>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="sell-item.html">Start Selling</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 SeCondary. All rights reserved.</p>
+            <p>Made for better shopping experiences.</p>
+        </div>
+    </footer>
+
+<script src="chat.js" defer></script>
+</body>
+</html>
