@@ -128,6 +128,9 @@
                                 <option>Beauty & Personal Care</option>
                                 <option>Sports & Outdoors</option>
                                 <option>Lifestyle</option>
+                                <option>Cosmetic</option>
+                                <option>Seasonal Goods</option>
+                                <option>Collectibles</option>
                                 <option>Other</option>
                             </select>
                         </div>
@@ -147,9 +150,9 @@
 
                         <div class="condition-options">
                             <label class="condition-option">
-                                <input type="radio" name="condition" value="Brand New" required>
+                                <input type="radio" name="condition" value="New" required>
                                 <span>
-                                    <strong>Brand New</strong>
+                                    <strong>New</strong>
                                     <small>Unused, original condition</small>
                                 </span>
                             </label>
@@ -336,6 +339,7 @@
                     <div class="preview-image" id="previewImage">
                         <span class="material-symbols-outlined">image</span>
                         <small>Your product photo will appear here</small>
+                        <div class="preview-thumbnails" id="previewThumbnails"></div>
                     </div>
 
                     <div class="preview-details">
@@ -408,104 +412,7 @@
             <p>Made for better shopping experiences.</p>
         </div>
     </footer>
-
-    <!-- SMALL JAVASCRIPT FOR FORM PREVIEW -->
-    <script>
-        const itemName = document.getElementById("itemName");
-        const category = document.getElementById("category");
-        const price = document.getElementById("price");
-        const description = document.getElementById("description");
-        const locationInput = document.getElementById("location");
-        const photoInput = document.getElementById("photos");
-
-        const previewTitle = document.getElementById("previewTitle");
-        const previewCategory = document.getElementById("previewCategory");
-        const previewPrice = document.getElementById("previewPrice");
-        const previewLocation = document.getElementById("previewLocation");
-        const previewCondition = document.getElementById("previewCondition");
-        const previewImage = document.getElementById("previewImage");
-
-        function updatePreview() {
-            previewTitle.textContent =
-                itemName.value.trim() || "Your product name";
-
-            previewCategory.textContent =
-                category.value || "YOUR CATEGORY";
-
-            previewPrice.textContent =
-                "$" + (Number(price.value) || 0).toFixed(2);
-
-            previewLocation.textContent =
-                locationInput.value.trim() || "Your location";
-
-            const selectedCondition =
-                document.querySelector('input[name="condition"]:checked');
-
-            previewCondition.textContent =
-                selectedCondition ? selectedCondition.value : "Product condition will appear here";
-
-            document.getElementById("charCount").textContent =
-                description.value.length;
-
-            const sellingPrice = Number(price.value) || 0;
-            const sellerPayout = sellingPrice * 0.90;
-
-            document.getElementById("payout").textContent =
-                "$" + sellerPayout.toFixed(2);
-        }
-
-        [itemName, category, price, description, locationInput].forEach(function(field) {
-            field.addEventListener("input", updatePreview);
-            field.addEventListener("change", updatePreview);
-        });
-
-        document.querySelectorAll('input[name="condition"]').forEach(function(input) {
-            input.addEventListener("change", updatePreview);
-        });
-
-        // Show selected product photos.
-        photoInput.addEventListener("change", function() {
-            const preview = document.getElementById("photoPreview");
-            preview.innerHTML = "";
-
-            Array.from(photoInput.files).slice(0, 8).forEach(function(file) {
-                if (!file.type.startsWith("image/")) return;
-
-                if (file.size > 5 * 1024 * 1024) {
-                    alert(file.name + " is larger than 5 MB.");
-                    return;
-                }
-
-                const image = document.createElement("img");
-                image.src = URL.createObjectURL(file);
-                image.alt = "Selected product photo";
-                preview.appendChild(image);
-            });
-
-            const firstFile = photoInput.files[0];
-
-            if (firstFile && firstFile.type.startsWith("image/") &&
-                firstFile.size <= 5 * 1024 * 1024) {
-                previewImage.innerHTML = "";
-                const image = document.createElement("img");
-                image.src = URL.createObjectURL(firstFile);
-                image.alt = "Product preview";
-                previewImage.appendChild(image);
-            }
-        });
-
-        // Demo form submission.
-        document.getElementById("sellForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            if (!this.reportValidity()) return;
-
-            document.getElementById("formMessage").textContent =
-                "Your listing information is ready for review! This is a front-end demo; it has not been published or saved.";
-        });
-
-        updatePreview();
-    </script>
+    <script src="sell-item.js"></script>
 
 </body>
 </html>
