@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 @import url("color2.css");
 @import url("header-footer.css");
@@ -9,7 +8,7 @@
 }
 body{
     background-color: var(--surface-hover);
-    font-family: 'DM Sans',Inter,Arial,sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 #chat-hero{
     width: 70vw;
@@ -21,7 +20,6 @@ body{
     display: flex;
     flex-direction: row;
 }
-
 #chat-list-container{
     width: 25%;
     height: 100%;
@@ -31,12 +29,10 @@ body{
     background-color: var(--surface-card);
     padding: 15px 10px;
 }
-
 #chat-list-header{
     padding: 10px;
     font-size: 14px;
 }
-
 #search-container{
     padding: 5px 10px 10px;
 }
@@ -49,11 +45,14 @@ body{
     padding: 0 15px;
     border-radius: 25px;
     background-color: var(--surface-pill);
+
 }
+
 #chat-search span{
     font-size: 24px;
     color: var(--text-secondary);
 }
+
 #chat-search input{
     width: 100%;
     min-width: 0;
@@ -75,7 +74,6 @@ body{
     padding: 12px 10px;
     cursor: pointer;
     border-radius: 5px;
-
 }
 .chat:hover{
     background-color: var(--surface-hover);
@@ -130,7 +128,6 @@ body{
     flex-direction: column;
     padding: 20px 16px;
 }
-
 #chat-header{
     color: var(--text-primary);
     height: 42px;
@@ -139,7 +136,6 @@ body{
     align-items: center;
     gap: 12px;
     border-bottom: 1px solid var(--border-subtle);
-
 }
 #chat-back-button{
     display: none;
@@ -179,7 +175,6 @@ body{
     padding: 12px;
     border-radius: 8px;
 }
-
 #chat-text{
     height: 30%;
     min-height: 140px;
@@ -218,7 +213,7 @@ body{
     background-color: transparent;
     padding-top: 12px;
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 #chat-text textarea::placeholder{
     color: var(--text-tertiary);
@@ -261,8 +256,7 @@ body{
     width: 25%;
     height: 100%;
     padding: 35px 15px 15px;
-     background-color: var(--surface-card);
-
+    background-color: var(--surface-card);
 }
 #store-card{
     width: 100%;
@@ -291,7 +285,6 @@ body{
     border: 1px solid var(--brand-primary);
     cursor: pointer;
 }
-
 @media (max-width: 1032px){
     #chat-hero{
         width: calc(100% - 32px);
