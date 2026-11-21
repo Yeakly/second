@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Products | SeCondary</title>
+    <link rel="stylesheet" href="browserproduct.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Se<span>Condary</span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="browseproduct.html" class="active">Browse Products</a>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="chat.html">Messages</a>
+            </nav>
+
+            <form class="search-box">
+                <span class="material-symbols-outlined">search</span>
+                <input type="search" placeholder="Search products...">
+            </form>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+                <a href="#" aria-label="Notifications">
+                    <span class="material-symbols-outlined">notifications</span>
+                </a>
+                <a href="user.html" aria-label="My account">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="browse-page">
+        <div class="browse-container">
+            <aside class="Sidebar">
+                <h2>Filter</h2>
+                    <!--"filter-group" -->
+                <div >
+                    <p>Category</p>
+                    <label><input type="checkbox" checked> All Categories</label>
+                    <label><input type="checkbox"> Fashion</label>
+                    <label><input type="checkbox"> Home & Living</label>
+                    <label><input type="checkbox"> Electronics</label>
+                    <label><input type="checkbox"> Books & Stationery </label>
+                    <label><input type="checkbox"> Lifestyle</label>
+                    <label><input type="checkbox"> Sports & Outdoors </label>
+                    <label><input type="checkbox"> Musical Instruments </label>
+                    <label><input type="checkbox"> Cosmetic </label>
+                    <label><input type="checkbox"> Seasonal Goods </label>
+                    <label><input type="checkbox"> Collectibles </label>
+
+                    <p>Price Range</p>
+                    <form class="price-form">
+                        <input type="number" min="0" placeholder="$1" aria-label="Minimum price">
+                        <span>-</span>
+                        <input type="number" min="0" placeholder="$100" aria-label="Maximum price">
+                    </form>
+
+                    <p>Condition</p>
+                    <ul>
+                        <li>New</li>
+                        <li>Good</li>
+                        <li>Fair</li>
+                    </ul>
+                </div>
+                <button type="button" class="apply">Apply filters</button>
+
+            </aside>
+                <!-- Page1 -->
+            <div class="browse-results">
+                <div class="product-list">
+                    <article class="product-card">
+                        <div class="card-top-tag">
+                            <span class="tag">Good</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="/products/Suedeleatherjacket.jpg" alt="Suede leather zip-up bomber jacket" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">FASHION</div>
+                            <h3 class="product-title">Suede leather zip-up bomber jacket</h3>
+                            <div class="price-row">
+                                <span class="price">$8.50</span>
+                                <a href="#" class="view-link">View item</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">New</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="/products/sonyhead.jpg" alt="SONY ULT headphones" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">ELECTRONIC</div>
+                            <h3 class="product-title">SONY ULT headphones</h3>
+                            <div class="price-row">
+                                <span class="price">$120.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                            <p class="extraD"> o Case included</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">Fair</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="products/Leatherbelt.jpg" alt="Leather belt" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">FASHION</div>
+                            <h3 class="product-title">Belt</h3>
+                            <div class="price-row">
+                                <span class="price">$12.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                            <p class="extraD">o Extra head included</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">Good</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="/products/stainlesstumbler.jpg" alt="22 Oz stainless tumbler" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">HOME & LIVING</div>
+                            <h3 class="product-title">22 Oz stainless tumbler</h3>
+                            <div class="price-row">
+                                <span class="price">$6.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">Good</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="image/boot.jpg" alt="Brown leather high boots" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">FASHION</div>
+                            <h3 class="product-title">Brown leather high boots</h3>
+                            <div class="price-row">
+                                <span class="price">$34.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">Good</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="/image/keyboard.jpg" alt="Mechanical keyboard" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">ELECTRONIC</div>
+                            <h3 class="product-title">Mechanical Keyboard</h3>
+                            <div class="price-row">
+                                <span class="price">$75.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                            <p class="extraD">o USB-C cable included</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">New</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="image/watch.jpg" alt="Minimal wristwatch" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">FASHION</div>
+                            <h3 class="product-title">Minimal Classic Watch</h3>
+                            <div class="price-row">
+                                <span class="price">$68.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card ">
+                        <div class="card-top-tag">
+                            <span class="tag">Good</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="/products/modernchair.jpg" alt="Modern chair" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">HOME & LIVING</div>
+                            <h3 class="product-title">Modern Home Decor</h3>
+                            <div class="price-row">
+                                <span class="price">$40.00</span>
+                                <a href="#" class="view-link">View item </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-top-tag">
+                            <span class="tag">Good</span>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="item-illustration">
+                                <img src="/products/Sonych520 .jpeg" alt="Wireless headphones" class="product-img">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-meta">ELECTRONIC</div>
+                            <h3 class="product-title">Wireless Headphones</h3>
+                            <div class="price-row">
+                                <span class="price">$45.00</span>
+                                <a href="#" class="view-link">View item</a>
+                            </div>
+                            <p class="extraD"> o Case + Charger included</p>
+                        </div>
+                    </article>
+                </div>
+
+
+                <div class="pagination-bar">
+                    <p class="results-count">Showing 1-9 of 48 products</p>
+                
+                    <nav class="pagination" >
+                        <span class="page-btn page-nav"> <- </span>
+                        <a href="browseproduct.html" class="page-btn active">1</a>
+                        <a href="browseproduct2.html" class="page-btn">2</a>
+                        <a href="browseproduct3.html" class="page-btn">3</a>
+                        <a href="browseproduct4.html" class="page-btn">4</a>
+                        <a href="browseproduct5.html" class="page-btn">5</a>
+                        <a href="browseproduct6.html" class="page-btn">6</a>
+                        <a href="browseproduct2.html" class="page-btn page-nav">-></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Se<span>Condary</span></a>
+                <p>A New Home for Old Things.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping</h3>
+                <a href="index.html#categories">Categories</a>
+                <a href="browseproduct.html">Featured Products</a>
+                <a href="browseproduct.html">New Arrivals</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Sellers</h3>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="sell-item.html">Start Selling</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SeCondary. All rights reserved.</p>
+            <p>Made for better shopping experiences.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

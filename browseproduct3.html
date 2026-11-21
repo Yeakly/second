@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Products | SeCondary</title>
+    <link rel="stylesheet" href="browserproduct.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Se<span>Condary</span></a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="browseproduct.html" class="active">Browse Products</a>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="chat.html">Messages</a>
+            </nav>
+
+            <form class="search-box" action="#products">
+                <span class="material-symbols-outlined">search</span>
+                <input type="search" placeholder="Search products...">
+            </form>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+                <a href="#" aria-label="Notifications">
+                    <span class="material-symbols-outlined">notifications</span>
+                </a>
+                <a href="user.html" aria-label="My account">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="browse-page">
+        <div class="browse-container">
+            <aside class="Sidebar">
+                <h2>Filter</h2>
+                    <!--"filter-group" -->
+                <div >
+                    <p>Category</p>
+                    <label><input type="checkbox" checked> All Categories</label>
+                    <label><input type="checkbox"> Fashion</label>
+                    <label><input type="checkbox"> Home & Living</label>
+                    <label><input type="checkbox"> Electronics</label>
+                    <label><input type="checkbox"> Books & Stationery </label>
+                    <label><input type="checkbox"> Lifestyle</label>
+                    <label><input type="checkbox"> Sports & Outdoors </label>
+                    <label><input type="checkbox"> Musical Instruments </label>
+                    <label><input type="checkbox"> Cosmetic </label>
+                    <label><input type="checkbox"> Seasonal Goods </label>
+                    <label><input type="checkbox"> Collectibles </label>
+
+                    <p>Price Range</p>
+                    <form class="price-form">
+                        <input type="number" min="0" placeholder="$1" aria-label="Minimum price">
+                        <span>-</span>
+                        <input type="number" min="0" placeholder="$100" aria-label="Maximum price">
+                    </form>
+
+                    <p>Condition</p>
+                    <ul>
+                        <li>New</li>
+                        <li>Good</li>
+                        <li>Fair</li>
+                    </ul>
+                </div>
+                <button type="button" class="apply">Apply filters</button>
+
+            </aside>
+                <!-- Page3 -->
+                <div class="browse-results">
+                    <div class="product-list">
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">Good</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/31.jpg" alt="Vintage paperback novel set" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">BOOKS & STATIONERY</div>
+                                <h3 class="product-title">Classic literature book bundle</h3>
+                                <div class="price-row">
+                                    <span class="price">$14.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                                <p class="extraD">o 4 paperbacks included</p>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">new</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/32.jpg" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">LIFESTYLE</div>
+                                <h3 class="product-title">Minimalist desk tray set</h3>
+                                <div class="price-row">
+                                    <span class="price">$18.50</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                                <p class="extraD">o Only the tray included</p>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">New</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/33.jpg" alt="Trail running bottle pack" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">SPORTS &amp; OUTDOORS</div>
+                                <h3 class="product-title">Outdoor hike &amp; run pack</h3>
+                                <div class="price-row">
+                                    <span class="price">$31.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">Good</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/34.webp" alt="Desktop MIDI controller" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">MUSICAL INSTRUMENTS</div>
+                                <h3 class="product-title">Portable music key deck</h3>
+                                <div class="price-row">
+                                    <span class="price">$67.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                                <p class="extraD">o USB cable included</p>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">Like new</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/35.jpeg" alt="Structured crossbody bag" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">FASHION</div>
+                                <h3 class="product-title">Structured crossbody bag</h3>
+                                <div class="price-row">
+                                    <span class="price">$29.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">New</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/36.jpg" alt="Brushed steel coffee mug" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">HOME & LIVING</div>
+                                <h3 class="product-title">Insulated brew carafe</h3>
+                                <div class="price-row">
+                                    <span class="price">$21.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">Good</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/37.jpeg" alt="Custom switch mechanical keyboard" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">ELECTRONICS</div>
+                                <h3 class="product-title">Compact mechanical keyboard</h3>
+                                <div class="price-row">
+                                    <span class="price">$58.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">Good</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="/products/38.jpg" alt="Classic stainless watch" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">FASHION</div>
+                                <h3 class="product-title">Classic analog wristwatch</h3>
+                                <div class="price-row">
+                                    <span class="price">$52.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                            </div>
+                        </article>
+                
+                        <article class="product-card">
+                            <div class="card-top-tag">
+                                <span class="tag">Fair</span>
+                            </div>
+                            <div class="card-img-container">
+                                <div class="item-illustration">
+                                    <img src="products/39.webp" alt="Casual blazer" class="product-img">
+                                </div>
+                            </div>
+                            <div class="card-details">
+                                <div class="card-meta">FASHION</div>
+                                <h3 class="product-title">Casual blazer</h3>
+                                <div class="price-row">
+                                    <span class="price">$30.00</span>
+                                    <a href="#" class="view-link">View item</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                
+                    <div class="pagination-bar">
+                        <p class="results-count">Showing 19-27 of 48 products</p>
+                
+                        <nav class="pagination" >
+                            <a href="browseproduct2.html" class="page-btn page-nav"><-</a>
+                            <a href="browseproduct.html" class="page-btn">1</a>
+                            <a href="browseproduct2.html" class="page-btn">2</a>
+                            <a href="browseproduct3.html" class="page-btn active" aria-current="page">3</a>
+                            <a href="browseproduct4.html" class="page-btn">4</a>
+                            <a href="browseproduct5.html" class="page-btn">5</a>
+                            <a href="browseproduct6.html" class="page-btn">6</a>
+                            <a href="browseproduct4.html" class="page-btn page-nav" >-></a>
+                        </nav>
+                    </div>
+                </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Se<span>Condary</span></a>
+                <p>A New Home for Old Things.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Shopping</h3>
+                <a href="index.html#categories">Categories</a>
+                <a href="browseproduct.html">Featured Products</a>
+                <a href="browseproduct.html">New Arrivals</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Sellers</h3>
+                <a href="sell-item.html">Sell an Item</a>
+                <a href="sell-item.html">Start Selling</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SeCondary. All rights reserved.</p>
+            <p>Made for better shopping experiences.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
