@@ -135,12 +135,12 @@ button, input, select, textarea {
 .sell-page {
     background: var(--light);
     min-height: 100vh;
-    padding: 75px;
+    padding: 0 0 75px;
 }
 
 .sell-intro {
     background: var(--white);
-    padding: 45px 28px 35px;
+    padding: 45px 35px;
     border-bottom: 1px solid var(--border);
 }
 
@@ -307,14 +307,14 @@ button, input, select, textarea {
     margin-bottom: 0px;
 }
 
-.form-group label {
+.form-group > label {
     display: block;
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
-.form-group label span {
+.form-group > label > span {
     color: var(--primary);
 }
 
@@ -372,7 +372,7 @@ button, input, select, textarea {
     gap: 10px;
 }
 
-.condition-options {
+.condition-option {
     position: relative;
     display: block;
     cursor: pointer;
@@ -837,7 +837,8 @@ button, input, select, textarea {
     .sell-layout {
         grid-template-columns: minmax(0, 1fr) 270px;
         gap: 15px;
-        padding: 0 20px;
+        padding-top: 35px;
+        padding: 35 20px 0;
     }
 
     .sell-sidebar {
@@ -862,7 +863,7 @@ button, input, select, textarea {
     }
 
     .sell-intro {
-        padding: 30px 20px;
+        padding: 30px 0;
     }
 
     .sell-intro h1 {

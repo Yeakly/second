@@ -22,7 +22,7 @@ function updatePreview() {
     previewCategory.textContent =
         category.value.trim() || "Your category";
 
-    previewprice.textContent =
+    previewPrice.textContent =
         "$" + (Number(price.value) || 0).toFixed(2);
 
     previewLocation.textContent =
@@ -103,19 +103,19 @@ function renderPhotoPreviews() {
         const formThumb = document.createElement("img");
         formThumb.src = imageUrl;
         formThumb.alt = "Selected product photos " + (index + 1);
-        photopreview.appendChild(formThumb);
+        photoPreview.appendChild(formThumb);
 
         const sidebarThumb = document.createElement("img");
         sidebarThumb.src = imageUrl;
         sidebarThumb.alt = "Listing Thumbnail " + (index + 1);
-        if (index === 0) sidebarThumb.classlist.add("active");
+        if (index === 0) sidebarThumb.classList.add("active");
 
         sidebarThumb.addEventListener("click", function() {
             previewImage.innerHTML = `<img src="${imageUrl}" alt="Product preview">`;
             previewThumbnails.querySelectorAll("img").forEach(function(img) {
-                img.classlist.remove("active");
+                img.classList.remove("active");
             });
-            sidebarThumb.classlist.add("active");
+            sidebarThumb.classList.add("active");
         });
 
         previewThumbnails.appendChild(sidebarThumb);
@@ -123,8 +123,8 @@ function renderPhotoPreviews() {
 }
 
 // Demo form
-document.getElementById("sellForm").addEventListener("submit", function(event) {
-    even.preventDefualt();
+document.getElementById("sell-form").addEventListener("submit", function(event) {
+    event.preventDefualt();
 
     if (!this.reportValidity()) return;
 
