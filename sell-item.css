@@ -1,18 +1,15 @@
+/*  Root variables and global reset */
 :root {
     --primary: #dc6900;
     --primary-dark: #b95500;
     --dark: #221d1b;
     --text: #68645f;
+    --muted: #bbb5ae;
     --light: #fef1ed;
-    --white: #ffffff;
+    --white: #fff;
     --border: #e5e7eb;
-    --soft: #f0e3df;
-    --shadow: 0 8px 28px rgba(35, 30, 25, 0.07);
-
-    --fee-negative: #e0301e;
+    --shadow: 0 8px 28px rgb(35, 30, 25, 0.07);
 }
-
-/* GENERAL */
 
 * {
     margin: 0;
@@ -25,7 +22,7 @@ html {
 }
 
 body {
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     background: var(--white);
     color: var(--dark);
     line-height: 1.6;
@@ -40,8 +37,7 @@ button, input, select, textarea {
     font: inherit;
 }
 
-/* HEADER */
-
+/* Header and navigation section */
 .site-header {
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -92,7 +88,7 @@ button, input, select, textarea {
 
 .search-box {
     display: flex;
-    align-items: center;
+    align-items:center;
     gap: 9px;
     background: var(--light);
     border: 1px solid var(--border);
@@ -115,32 +111,31 @@ button, input, select, textarea {
     color: var(--dark);
 }
 
-.header-actions {
+.header-action {
     display: flex;
     gap: 16px;
     align-items: center;
 }
 
-.header-actions a {
+.header-action a {
     color: var(--dark);
     display: flex;
     align-items: center;
 }
 
-.header-actions a:hover {
+.header-action a:hover {
     color: var(--primary);
 }
 
-.header-actions .material-symbols-outlined {
+.header-action .material-symbols-outlined {
     font-size: 22px;
 }
 
-/* PAGE INTRO */
-
+/* Pagr intro */
 .sell-page {
     background: var(--light);
     min-height: 100vh;
-    padding-bottom: 75px;
+    padding: 75px;
 }
 
 .sell-intro {
@@ -152,6 +147,7 @@ button, input, select, textarea {
 .sell-container {
     max-width: 1160px;
     margin: auto;
+    padding: 0 20px;
 }
 
 .back-link {
@@ -175,7 +171,7 @@ button, input, select, textarea {
 .eyebrow {
     display: block;
     color: var(--primary);
-    font-size: 1px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -186,14 +182,13 @@ button, input, select, textarea {
     margin: 8px 0;
 }
 
-.sell-intro > .sell-container > p {
+.sell-intro > .sell-container >p {
     color: var(--text);
     font-size: 13px;
     max-width: 600px;
 }
 
-/* PROGRESS STEPS */
-
+/* Progress steps */
 .progress-steps {
     display: flex;
     align-items: center;
@@ -206,7 +201,7 @@ button, input, select, textarea {
     display: flex;
     align-items: center;
     gap: 10px;
-    min-width: 0;
+    min-width: 0px;
 }
 
 .step > span {
@@ -214,7 +209,7 @@ button, input, select, textarea {
     height: 34px;
     flex-shrink: 0;
     border-radius: 50%;
-    background: var(--soft);
+    background: var(--light);
     color: var(--text);
     display: grid;
     place-items: center;
@@ -222,22 +217,18 @@ button, input, select, textarea {
     font-weight: 700;
 }
 
-/* ACTIVE STEP CIRCLE */
-
+/* step circles */
 .step.active > span {
     color: var(--white);
-    background: #dc6900;
+    background: var(--primary);
 }
-
-/* COMPLETED STEP */
 
 .step.completed > span {
     color: var(--white);
-    background: #dc6900;
+    background: var(--primary);
 }
 
-.step strong,
-.step small {
+.step strong, .step small {
     display: block;
 }
 
@@ -250,17 +241,14 @@ button, input, select, textarea {
     font-size: 11px;
 }
 
-/* CONNECTING LINES */
-
 .step-line {
     flex: 1;
     height: 1px;
     min-width: 20px;
-    background: #f0e3df;
+    background: var(--light);
 }
 
-/* MAIN LAYOUT */
-
+/* Main layout */
 .sell-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 310px;
@@ -310,14 +298,13 @@ button, input, select, textarea {
     margin-top: 3px;
 }
 
-/* FORM ELEMENTS */
-
+/* Form elements */
 .form-group {
     margin-bottom: 20px;
 }
 
 .form-group:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .form-group label {
@@ -360,8 +347,8 @@ button, input, select, textarea {
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #aaa49d;
+.form-group textarea:focus::placeholder {
+    color: var(--muted);
 }
 
 .form-group > small {
@@ -377,7 +364,7 @@ button, input, select, textarea {
     gap: 17px;
 }
 
-/* CONDITION OPTIONS */
+/* Condition options */
 
 .condition-options {
     display: grid;
@@ -385,7 +372,7 @@ button, input, select, textarea {
     gap: 10px;
 }
 
-.condition-option {
+.condition-options {
     position: relative;
     display: block;
     cursor: pointer;
@@ -396,7 +383,7 @@ button, input, select, textarea {
     opacity: 0;
 }
 
-.condition-option span {
+.condition-option span{
     display: block;
     padding: 13px;
     border: 1px solid var(--border);
@@ -404,8 +391,7 @@ button, input, select, textarea {
     transition: 0.2s;
 }
 
-.condition-option strong,
-.condition-option small {
+.condition-option strong, .condition-option small {
     display: block;
 }
 
@@ -423,27 +409,24 @@ button, input, select, textarea {
     border-color: var(--primary);
 }
 
-/* ACTIVE CONDITION PILL */
-
 .condition-option input:checked + span {
-    background: #fef1ed;
-    border: 1px solid #dc6900;
-    color: #dc6900;
+    background: var(--light);
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 .condition-option input:checked + span::after {
     content: "✓";
     float: right;
-    color: #dc6900;
+    color: var(--primary);
     font-weight: 800;
 }
 
-/* PHOTO UPLOAD */
-
+/* photo upload */
 .upload-area {
     min-height: 190px;
-    border: 1.5px dashed #d8c6bb;
-    background: #fcfaf7;
+    border: 1.5px dashed var(--muted);
+    background: var(--light);
     border-radius: 9px;
     display: flex;
     flex-direction: column;
@@ -457,7 +440,7 @@ button, input, select, textarea {
 
 .upload-area:hover {
     border-color: var(--primary);
-    background: #fef1ed;
+    background: var(--light);
 }
 
 .upload-area > .material-symbols-outlined {
@@ -479,7 +462,7 @@ button, input, select, textarea {
     color: var(--primary);
     border: 1px solid var(--primary);
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 12px;
     font-weight: 700;
     margin-top: 5px;
@@ -515,8 +498,7 @@ button, input, select, textarea {
     margin-top: 10px;
 }
 
-/* DESCRIPTION COUNTER */
-
+/* Description section */
 .character-count {
     display: flex;
     justify-content: space-between;
@@ -530,7 +512,7 @@ button, input, select, textarea {
     color: var(--primary);
 }
 
-/* PRICING */
+/* pricing section */
 
 .input-with-prefix {
     position: relative;
@@ -549,11 +531,9 @@ button, input, select, textarea {
     padding-left: 29px;
 }
 
-/* NET DIRECT DEPOSIT PAYOUT BOX */
-
 .payout-box {
-    background: #fef1ed;
-    border: 1px solid #f0e3df;
+    background: var(--light);
+    border: 1px solid var(--muted);
     border-radius: 7px;
     padding: 16px;
     display: flex;
@@ -580,12 +560,10 @@ button, input, select, textarea {
 }
 
 .payout-box > strong {
-    color: #dc6900;
+    color: var(--primary);
     font-size: 22px;
     white-space: nowrap;
 }
-
-/* NEGATIVE FEE DEDUCTIONS */
 
 .fee-deduction,
 .fee-amount,
@@ -593,8 +571,7 @@ button, input, select, textarea {
     color: #e0301e;
 }
 
-/* FORM BUTTONS */
-
+/* Form buttons section */
 .form-actions {
     display: flex;
     justify-content: flex-end;
@@ -616,17 +593,15 @@ button, input, select, textarea {
     transition: 0.2s;
 }
 
-/* CONTINUE BUTTON */
-
 .button-primary {
     color: var(--white);
-    background: #dc6900;
-    border: 1px solid #dc6900;
+    background: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .button-primary:hover {
-    background: #b95500;
-    border-color: #b95500;
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .button-primary .material-symbols-outlined {
@@ -650,8 +625,7 @@ button, input, select, textarea {
     line-height: 1.7;
 }
 
-/* RIGHT SIDEBAR */
-
+/* Right sidebar section */
 .sell-sidebar {
     display: flex;
     flex-direction: column;
@@ -674,7 +648,7 @@ button, input, select, textarea {
     flex-direction: column;
     gap: 8px;
     border-radius: 7px;
-    color: #aaa49d;
+    color: var(--muted);
     overflow: hidden;
 }
 
@@ -713,10 +687,6 @@ button, input, select, textarea {
     border-color: var(--primary);
 }
 
-.preview-details {
-    padding-top: 15px;
-}
-
 .preview-details > span {
     font-size: 14px;
     color: var(--primary);
@@ -738,7 +708,7 @@ button, input, select, textarea {
 .preview-details > strong {
     display: block;
     font-size: 22px;
-    color: var(--primary);
+    color: var(--text);
 }
 
 .preview-details > small {
@@ -748,11 +718,10 @@ button, input, select, textarea {
     margin-top: 7px;
 }
 
-/* TIPS CARD */
-
+/* Cards section */
 .tips-card {
-    background: #fef1ed;
-    border-color: #f0e3df;
+    background: var(--light);
+    border-color: var(--border);
 }
 
 .tips-card > .material-symbols-outlined {
@@ -776,8 +745,6 @@ button, input, select, textarea {
     line-height: 1.7;
 }
 
-/* HELP CARD */
-
 .help-card {
     display: flex;
     gap: 12px;
@@ -795,7 +762,7 @@ button, input, select, textarea {
 
 .help-card p {
     color: var(--text);
-    font-size: 14px;
+    font-size: 12px;
     margin: 4px 0 8px;
 }
 
@@ -805,10 +772,9 @@ button, input, select, textarea {
     font-weight: 700;
 }
 
-/* FOOTER */
-
+/* Footer section */
 .site-footer {
-    background: #ffffff;
+    background: var(--white);
     padding: 55px 28px 20px;
 }
 
@@ -822,7 +788,7 @@ button, input, select, textarea {
 
 .footer-brand p {
     max-width: 280px;
-    color: #bbb5ae;
+    color: var(--muted);
     font-size: 12px;
     margin-top: 13px;
     line-height: 1.8;
@@ -840,28 +806,27 @@ button, input, select, textarea {
 }
 
 .footer-column a {
-    color: #bbb5ae;
+    color: var(--muted);
     font-size: 11px;
 }
 
 .footer-column a:hover {
-    color: var(--white);
+    color: var(--dark);
 }
 
 .footer-bottom {
     max-width: 1200px;
     margin: 45px auto 0;
     padding-top: 18px;
-    border-top: 1px solid #46423d;
+    border-top: 1px solid var(--dark);
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    color: #aaa49d;
+    color: var(--muted);
     font-size: 10px;
 }
 
-/* RESPONSIVE DESIGN */
-
+/* Responsive desighn */
 @media (max-width: 950px) {
     .header-container {
         flex-wrap: wrap;
@@ -872,8 +837,7 @@ button, input, select, textarea {
     .sell-layout {
         grid-template-columns: minmax(0, 1fr) 270px;
         gap: 15px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
     }
 
     .sell-sidebar {
@@ -937,6 +901,7 @@ button, input, select, textarea {
 
     .preview-card {
         grid-column: 1 / -1;
+
     }
 
     .form-card {

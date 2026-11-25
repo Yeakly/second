@@ -1,42 +1,40 @@
-const itemName = document.getElementById("itemName");
+const itemName = document.getElementById("item-name");
 const category = document.getElementById("category");
 const price = document.getElementById("price");
 const description = document.getElementById("description");
 const locationInput = document.getElementById("location");
 const photoInput = document.getElementById("photos");
+const previewTitle = document.getElementById("preview-title");
+const previewCategory = document.getElementById("preview-category");
+const previewPrice = document.getElementById("preview-price");
+const previewLocation = document.getElementById("preview-location");
+const previewCondition = document.getElementById("preview-condition");
+const previewImage = document.getElementById("preview-image");
+const previewThumbnails = document.getElementById("preview-thumbnails");
+const photoPreview = document.getElementById("photo-preview");
 
-const previewTitle = document.getElementById("previewTitle");
-const previewCategory = document.getElementById("previewCategory");
-const previewPrice = document.getElementById("previewPrice");
-const previewLocation = document.getElementById("previewLocation");
-const previewCondition = document.getElementById("previewCondition");
-const previewImage = document.getElementById("previewImage");
-const previewThumbnails = document.getElementById("previewThumbnails");
-const photoPreview = document.getElementById("photoPreview");
-
-// Keep track of all valid photos added across multiple selections
-let uploadedPhotos = [];
+let uploadedPhotos =[];
 
 function updatePreview() {
     previewTitle.textContent =
         itemName.value.trim() || "Your product name";
-
+    
     previewCategory.textContent =
-        category.value || "YOUR CATEGORY";
+        category.value.trim() || "Your category";
 
-    previewPrice.textContent =
+    previewprice.textContent =
         "$" + (Number(price.value) || 0).toFixed(2);
 
     previewLocation.textContent =
         locationInput.value.trim() || "Your location";
 
-    const selectedCondition =
+    const selectedCondition = 
         document.querySelector('input[name="condition"]:checked');
 
     previewCondition.textContent =
         selectedCondition ? selectedCondition.value : "Product condition will appear here";
 
-    document.getElementById("charCount").textContent =
+    document.getElementById("char-count").textContent =
         description.value.length;
 
     const sellingPrice = Number(price.value) || 0;
@@ -55,12 +53,12 @@ document.querySelectorAll('input[name="condition"]').forEach(function(input) {
     input.addEventListener("change", updatePreview);
 });
 
-// Handle adding new photos (up to 8 total)
+// Uploading photos up to 8
 photoInput.addEventListener("change", function() {
     const newFiles = Array.from(photoInput.files);
 
     newFiles.forEach(function(file) {
-        if (uploadedPhotos.length >= 8) {
+        if (uploadedPhotos.length >=8) {
             return;
         }
 
@@ -80,12 +78,12 @@ photoInput.addEventListener("change", function() {
         alert("Maximum of 8 photos reached.");
     }
 
-    // Reset input so the user can pick the same file again if needed
+    // to make the same file can be picked
     photoInput.value = "";
     renderPhotoPreviews();
 });
 
-// Render all uploaded photos in both the form and "Your Listing" sidebar
+// Render all uploaded photos in both the form and Your Listing sidebar
 function renderPhotoPreviews() {
     photoPreview.innerHTML = "";
     previewThumbnails.innerHTML = "";
@@ -98,43 +96,40 @@ function renderPhotoPreviews() {
         return;
     }
 
-    // Set the first photo as the main "Your Listing" image
+    // Set the first uploaded photo as the main one showing in Your listing
     previewImage.innerHTML = `<img src="${uploadedPhotos[0]}" alt="Product preview">`;
 
     uploadedPhotos.forEach(function(imageUrl, index) {
-        // 1. Add thumbnail to the form's #photoPreview box
         const formThumb = document.createElement("img");
         formThumb.src = imageUrl;
-        formThumb.alt = "Selected product photo " + (index + 1);
-        photoPreview.appendChild(formThumb);
+        formThumb.alt = "Selected product photos " + (index + 1);
+        photopreview.appendChild(formThumb);
 
-        // 2. Add thumbnail to the "Your Listing" sidebar gallery
         const sidebarThumb = document.createElement("img");
         sidebarThumb.src = imageUrl;
-        sidebarThumb.alt = "Listing thumbnail " + (index + 1);
-        if (index === 0) sidebarThumb.classList.add("active");
+        sidebarThumb.alt = "Listing Thumbnail " + (index + 1);
+        if (index === 0) sidebarThumb.classlist.add("active");
 
-        // Allow clicking any thumbnail in "Your Listing" to view it large
         sidebarThumb.addEventListener("click", function() {
             previewImage.innerHTML = `<img src="${imageUrl}" alt="Product preview">`;
             previewThumbnails.querySelectorAll("img").forEach(function(img) {
-                img.classList.remove("active");
+                img.classlist.remove("active");
             });
-            sidebarThumb.classList.add("active");
+            sidebarThumb.classlist.add("active");
         });
 
         previewThumbnails.appendChild(sidebarThumb);
     });
 }
 
-// Demo form submission
+// Demo form
 document.getElementById("sellForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    even.preventDefualt();
 
     if (!this.reportValidity()) return;
 
-    document.getElementById("formMessage").textContent =
-        "Your listing information is ready for review! This is a front-end demo; it has not been published or saved.";
+    document.getElementById("form-message").textContent = 
+        "Your listing information si ready to review! This is a front-end demo; it has not been published or saved.";
 });
 
 updatePreview();

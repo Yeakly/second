@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sell an Item | SeCondary</title>
+    <title>Sell an Item | Secondary</title>
     <link rel="stylesheet" href="sell-item.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
-
-    <!-- HEADER: SAME AS HOMEPAGE -->
+    <!-- Header section -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">Se<span>Condary</span></a>
 
             <nav class="main-nav">
                 <a href="index.html">Home</a>
-                <a href="index.html#products">Browse Products</a>
+                <a href="#">Browse Products</a>
                 <a href="sell-item.html" class="active">Sell an Item</a>
-                <a href="index.html#messages">Messages</a>
+                <a href="#">Messages</a>
             </nav>
 
-            <form class="search-box" action="#products">
+            <form class="search-box" action="index.html#products">
                 <span class="material-symbols-outlined">search</span>
                 <input type="search" placeholder="Search products...">
             </form>
-            <div class="header-actions">
+
+            <div class="header-action">
                 <a href="#" aria-label="Shopping bag">
                     <span class="material-symbols-outlined">shopping_bag</span>
                 </a>
-                <a href="#" aria-label="Notifications">
+                <a href="#" aria-label="Notification">
                     <span class="material-symbols-outlined">notifications</span>
                 </a>
                 <a href="#" aria-label="My account">
                     <span class="material-symbols-outlined">person</span>
                 </a>
             </div>
+
         </div>
     </header>
-            
     <main class="sell-page">
-
-        <!-- PAGE INTRODUCTION -->
+        <!-- Page intro -->
         <section class="sell-intro">
             <div class="sell-container">
                 <a href="index.html" class="back-link">
@@ -52,10 +51,7 @@
 
                 <span class="eyebrow">SECONDARY SELLER CENTER</span>
                 <h1>List an Item for Sale</h1>
-                <p>
-                    Give your items a new home. Add your product details,
-                    set your price, and get ready to reach new buyers.
-                </p>
+                <p>Give your items a new home. Add your product details, set your price, and get ready to reach new buyers.</p>
 
                 <div class="progress-steps">
                     <div class="step active">
@@ -88,13 +84,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- SELLING FORM -->
+        <!-- Selling form -->
         <section class="sell-container sell-layout">
-
-            <form class="sell-form" id="sellForm">
-
-                <!-- ITEM INFORMATION -->
+            <form class="sell-form" id="sell-form">
+                <!-- Item info -->
                 <div class="form-card">
                     <div class="card-heading">
                         <div>
@@ -105,11 +98,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="itemName">Product Name <span>*</span></label>
+                        <label for="item-name">Product Name <span>*</span></label>
                         <input
                             type="text"
-                            id="itemName"
-                            name="itemName"
+                            id="item-name"
+                            name="item-name"
                             placeholder="e.g. Classic Leather Shoulder Bag"
                             maxlength="80"
                             required>
@@ -122,12 +115,12 @@
                             <select id="category" name="category" required>
                                 <option value="">Select category</option>
                                 <option>Fashion</option>
-                                <option>Electronics</option>
                                 <option>Home & Living</option>
+                                <option>Electronics</option>
                                 <option>Books & Stationery</option>
-                                <option>Beauty & Personal Care</option>
-                                <option>Sports & Outdoors</option>
                                 <option>Lifestyle</option>
+                                <option>Sports & Outdoors</option>
+                                <option>Musical Instrument</option>
                                 <option>Cosmetic</option>
                                 <option>Seasonal Goods</option>
                                 <option>Collectibles</option>
@@ -158,7 +151,7 @@
                             </label>
 
                             <label class="condition-option">
-                                <input type="radio" name="condition" value="Like New">
+                                <input type="radio" name="condition" value="Like New" required>
                                 <span>
                                     <strong>Like New</strong>
                                     <small>Almost no signs of use</small>
@@ -166,7 +159,7 @@
                             </label>
 
                             <label class="condition-option">
-                                <input type="radio" name="condition" value="Good">
+                                <input type="radio" name="condition" value="Good" required>
                                 <span>
                                     <strong>Good</strong>
                                     <small>Minor signs of use</small>
@@ -174,7 +167,7 @@
                             </label>
 
                             <label class="condition-option">
-                                <input type="radio" name="condition" value="Fair">
+                                <input type="radio" name="condition" value="Fair" required>
                                 <span>
                                     <strong>Fair</strong>
                                     <small>Visible signs of use</small>
@@ -183,8 +176,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- PRODUCT PHOTOS -->
+                <!-- Product photos -->
                 <div class="form-card">
                     <div class="card-heading">
                         <div>
@@ -197,7 +189,7 @@
                     <label class="upload-area" for="photos">
                         <span class="material-symbols-outlined">cloud_upload</span>
                         <strong>Click to upload product photos</strong>
-                        <small>PNG, JPG or WEBP. Maximum 5 MB per image.</small>
+                        <small>PNG, JPG, WEBP, Maximum 5 MB per image.</small>
                         <span class="upload-button">Choose Photos</span>
                     </label>
 
@@ -208,17 +200,16 @@
                         accept="image/png,image/jpeg,image/webp"
                         multiple>
 
-                    <div class="photo-preview" id="photoPreview"></div>
+                    <div class="photo-preview" id="photo-preview"></div>
                     <small class="form-help">Add clear photos from different angles.</small>
                 </div>
-
-                <!-- DESCRIPTION -->
+                <!-- Description -->
                 <div class="form-card">
                     <div class="card-heading">
                         <div>
                             <span class="card-number">03</span>
                             <h2>Product Description</h2>
-                            <p>Help buyers understand your item's features and details.</p>
+                            <p>Help buyers understnd your item's features and details.</p>
                         </div>
                     </div>
 
@@ -231,15 +222,14 @@
                             maxlength="1000"
                             placeholder="Describe your product, its features, size, color, and any important details..."
                             required></textarea>
-
+                        
                         <div class="character-count">
-                            <span>Be honest and specific about the product.</span>
-                            <span><b id="charCount">0</b>/1000</span>
+                            <span>Be hornest and specific about the product.</span>
+                            <span><b id="char-count">0</b>/1000</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- PRICING -->
+                <!-- Pricing -->
                 <div class="form-card">
                     <div class="card-heading">
                         <div>
@@ -260,7 +250,6 @@
                                     name="price"
                                     min="0.01"
                                     step="0.01"
-                                    placeholder="0.00"
                                     required>
                             </div>
                         </div>
@@ -280,13 +269,12 @@
                     <div class="payout-box">
                         <div>
                             <strong>Estimated Seller Payout</strong>
-                            <small>Example calculation with a 10% marketplace fee.</small>
+                            <small>Example calculate with a 10% marketplace fee.</small>
                         </div>
                         <strong id="payout">$0.00</strong>
                     </div>
                 </div>
-
-                <!-- SHIPPING -->
+                <!-- Shipping -->
                 <div class="form-card">
                     <div class="card-heading">
                         <div>
@@ -325,35 +313,33 @@
                     </button>
                 </div>
 
-                <p class="form-message" id="formMessage" aria-live="polite"></p>
-
+                <p class="form-message" id="form-message" aria-live="polite"></p>
             </form>
-
-            <!-- RIGHT SIDEBAR -->
+            <!-- Right sidebar -->
             <aside class="sell-sidebar">
-
                 <div class="preview-card">
                     <span class="eyebrow">LIVE PREVIEW</span>
                     <h2>Your Listing</h2>
 
-                    <div class="preview-image" id="previewImage">
+                    <div class="preview-image" id="preview-image">
                         <span class="material-symbols-outlined">image</span>
                         <small>Your product photo will appear here</small>
-                        <div class="preview-thumbnails" id="previewThumbnails"></div>
                     </div>
 
+                    <div class="preview-thumbnails" id="preview-thumbnails"></div>
+
                     <div class="preview-details">
-                        <span id="previewCategory">YOUR CATEGORY</span>
-                        <h3 id="previewTitle">Your product name</h3>
-                        <p id="previewCondition">Product condition will appear here</p>
-                        <strong id="previewPrice">$0.00</strong>
-                        <small id="previewLocation">Your location</small>
+                        <span id="preview-category">YOUR CATEGORY</span>
+                        <h3 id="preview-title">Youe product name</h3>
+                        <p id="preview-condition">Product condition will appear here</p>
+                        <strong id="preview-price">$0.00</strong>
+                        <small id="preview-location">Your Location</small>
                     </div>
                 </div>
 
                 <div class="tips-card">
                     <span class="material-symbols-outlined">lightbulb</span>
-                    <h3>Seller Tips</h3>
+                    <h3>Sellers Tips</h3>
 
                     <ul>
                         <li>Use a clear and descriptive product title.</li>
@@ -368,17 +354,17 @@
                     <span class="material-symbols-outlined">support_agent</span>
                     <div>
                         <strong>Need Help?</strong>
-                        <p>Have questions about listing your product?</p>
-                        <a href="#">Contact Seller Support →</a>
+                        <p>Have questions about lidting your product?</p>
+                        <a href="#" class="contact-seller-support">
+                            Contact Seller Support
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
-
             </aside>
         </section>
-
     </main>
-
-    <!-- FOOTER: SAME AS HOMEPAGE -->
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-brand">
@@ -406,13 +392,11 @@
                 <a href="#">Privacy Policy</a>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>© 2026 SeCondary. All rights reserved.</p>
+            <p>&copy; 2026 SeCondary. All rights reserved.</p>
             <p>Made for better shopping experiences.</p>
         </div>
     </footer>
     <script src="sell-item.js"></script>
-
 </body>
 </html>
