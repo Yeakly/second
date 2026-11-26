@@ -1,3 +1,5 @@
+/* NANG, Sotheavin's part */
+
 const itemName = document.getElementById("item-name");
 const category = document.getElementById("category");
 const price = document.getElementById("price");
