@@ -1,3 +1,5 @@
+/* YEM, Yeakly's part */
+
 const chatHero = document.querySelector("#chat-hero");
 const chatHeader = document.querySelector("#chat-header h3");
 const chatItems = document.querySelectorAll("#chat-list .chat");
