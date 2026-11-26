@@ -1,6 +1,6 @@
 @import url("color2.css");
 @import url("header-footer.css");
-
+/* SAO, Rethpheaktraboth's part */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -337,41 +337,74 @@ body {
   color: var(--text-on-primary);
 }
 
-
 /* Responsive Design */
-@media (max-width: 950px) {
-    .product-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     .search-box {
-        display: none;
+        display: flex;
+        width: 100%;
+        max-width: 400px;
     }
-
     .browse-page {
         padding: 24px 16px 50px;
     }
-
+    .browse-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .Sidebar {
+        position: static;
+        width: 100%;
+    }
     .product-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        gap: 14px;
     }
-
     .card-img-container {
-        height: 160px;
+        height: 180px;
     }
-
     .card-details {
-        padding: 12px;
+        padding: 14px;
     }
+    .product-title {
+        font-size: 13px;
+    }
+    .price {
+        font-size: 16px;
+    }
+}
 
+@media (max-width: 440px) {
+    .search-box {
+        display: flex;
+        width: 100%;
+        max-width: 150px;
+        padding: 6px 10px;
+    }
+    .browse-page {
+        padding: 20px 12px 40px;
+    }
+    .browse-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .Sidebar {
+        position: static;
+        width: 100%;
+    }
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .card-img-container {
+        height: 150px;
+    }
+    .card-details {
+        padding: 10px;
+    }
     .product-title {
         font-size: 12px;
     }
-
     .price {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
