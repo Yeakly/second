@@ -1,0 +1,383 @@
+<!-- /* MOENG, Monymatin's part */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keychron Q1 Pro | SeCondary</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="Vitemstyle.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+        <header class="site-header">
+          <div class="header-container">
+              <a href="index.html" class="logo">Se<span>Condary</span></a>
+
+              <nav class="main-nav">
+                  <a href="index.html">Home</a>
+                  <a href="browseproduct.html" class="active">Browse Products</a>
+                  <a href="sell-item.html">Sell an Item</a>
+                  <a href="chat.html">Messages</a>
+              </nav>
+
+              <form class="search-box" action="#products">
+                  <span class="material-symbols-outlined">search</span>
+                  <input type="search" placeholder="Search products...">
+              </form>
+
+              <div class="header-actions">
+                  <a href="#" aria-label="Shopping bag">
+                      <span class="material-symbols-outlined">shopping_bag</span>
+                  </a>
+                  <a href="#" aria-label="Notifications">
+                      <span class="material-symbols-outlined">notifications</span>
+                  </a>
+                  <a href="user.html" aria-label="My account">
+                      <span class="material-symbols-outlined">person</span>
+                  </a>
+              </div>
+          </div>
+        </header> 
+    
+    <main class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#"><span class="material-symbols-outlined">home</span> Home</a>
+        <span>/</span>
+        <a href="#">Keyboards &amp; Desk</a>
+        <span>/</span>
+        <strong>Keychron Q1 Pro Wireless Mechanical Keyboard</strong>
+      </nav>
+
+      <!-- ===== Product ===== -->
+      <section class="product">
+        <!-- LEFT: gallery -->
+        <div class="gallery">
+          <div class="main-image">
+            <img id="mainImage" src="images.pdd/keyboard-1.jpg" alt="Keychron Q1 Pro keyboard" />
+
+            <div class="badges">
+              <span class="badge badge-stock"><i class="dot"></i> In Stock • Global Fast Ship</span>
+              <span class="badge badge-mode">Tri-Mode 2.4G/BT/Type-C</span>
+            </div>
+
+            <button class="zoom-btn" id="zoomBtn" aria-label="Zoom image">
+              <span class="material-symbols-outlined">zoom_in</span>
+            </button>
+          </div>
+
+          <div class="thumbnails" id="thumbnails">
+            <button class="thumb active"><img src="images.pdd/keyboard-1.jpg" alt="Angle 1" /></button>
+            <button class="thumb"><img src="images.pdd/keyboard-2.jpg" alt="Angle 2" /></button>
+            <button class="thumb"><img src="images.pdd/keyboard-3.jpg" alt="Switch detail" /></button>
+            <button class="thumb"><img src="images.pdd/keyboard-4.jpg" alt="Desk setup" /></button>      
+            </button>
+          </div>
+
+          <div class="atelier-badge">
+            <div class="atelier-icon"><span class="material-symbols-outlined">workspace_premium</span></div>
+            <div class="atelier-text">
+              <h3>Certified SeCondary Atelier <span class="material-symbols-outlined filled">verified</span></h3>
+              <p>Guaranteed Direct Manufacturer Batch • 100% Kon Khmer Factory KKF/ KHR Calibrated</p>
+            </div>
+            <div class="atelier-code">
+              <small>ATELIER PASS CODE</small>
+              <strong>KC-PRO-885123-KH</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: info -->
+        <div class="info">
+          <div class="store-row">
+            <a href="#" class="store">Keychron Official Atelier
+              <span class="material-symbols-outlined filled">verified</span>
+            </a>
+            <span class="store-rating">
+              <span class="material-symbols-outlined filled">star</span> <b>4.9</b> (1,248 sales)
+            </span>
+          </div>
+
+          <h1 class="product-title">Keychron Q1 Pro Tri-Mode Wireless RGB Mechanical Keyboard</h1>
+
+          <div class="price-box">
+            <div class="price">
+              <span class="price-now" id="priceNow">$198.00</span>
+              <span class="price-old">$229.00</span>
+              <span class="price-save">Save 14%</span>
+            </div>
+            <p class="shipping">
+              <span class="material-symbols-outlined">local_shipping</span>
+              Free Express Courier on orders over $100 • Estimated arrival 2-4 days
+            </p>
+          </div>
+
+          <!-- Switch -->
+          <div class="option">
+            <div class="option-head">
+              <label>Mechanical Switch</label>
+              <span class="option-value" id="switchName">Gateron Banana Tactile (57gf)</span>
+            </div>
+            
+            <div class="switch-grid" id="switchOptions">
+              <button class="switch-opt active" data-name="Gateron Banana Tactile (57gf)">
+                <b>Banana</b><small>Early Bump Tactile</small>
+              </button>
+              <button class="switch-opt" data-name="Gateron Red Linear (45gf)">
+                <b>Red</b><small>Smooth Linear</small>
+              </button>
+              <button class="switch-opt" data-name="Gateron Brown Gentle Tactile (55gf)">
+                <b>Brown</b><small>Subtle Bump</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Colorway -->
+          <div class="option">
+            <div class="option-head">
+              <label>Colorway Shell</label>
+              <span class="option-value muted" id="colorName">Carbon Black</span>
+            </div>
+            <div class="color-list" id="colorOptions">
+              <button class="color-opt active" data-name="Carbon Black" style="--swatch:#1e1e20"><i></i> Carbon Black</button>
+              <button class="color-opt" data-name="Retro White" style="--swatch:#ece8de"><i></i> Retro White</button>
+              <button class="color-opt" data-name="Silver Grey" style="--swatch:#9e9fa3"><i></i> Silver Grey</button>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="purchase">
+            <div class="quantity">
+              <button id="decrease" aria-label="Decrease"><span class="material-symbols-outlined">remove</span></button>
+              <span id="quantity">1</span>
+              <button id="increase" aria-label="Increase"><span class="material-symbols-outlined">add</span></button>
+            </div>
+            <button class="btn btn-outline" id="addToCart">
+              <span class="material-symbols-outlined">shopping_cart</span> Add to Cart
+            </button>
+            <button class="btn btn-primary" id="buyNow">
+              Buy Now
+            </button>
+            <button class="wishlist" id="wishlistBtn" aria-label="Add to wishlist">
+              <span class="material-symbols-outlined" id="wishlistIcon">favorite</span>
+            </button>
+          </div>
+
+          <div class="guarantees">
+            <span><span class="material-symbols-outlined">replay</span> 30-Day Hassle-Free Returns</span>
+          </div>
+
+          <!-- Accordions -->
+          <div class="accordion">
+            <div class="acc-item open">
+              <button class="acc-toggle" aria-expanded="true">
+                <span><span class="material-symbols-outlined">tune</span> Specifications &amp; Dimensions</span>
+                <span class="material-symbols-outlined chevron">expand_more</span>
+              </button>
+              <div class="acc-content">
+                <ul class="specs">
+                  <li><span>Layout</span><span>75% Knob Edition (81 Keys)</span></li>
+                  <li><span>Body Material</span><span>Full CNC 6063 Aluminum</span></li>
+                  <li><span>Polling Rate</span><span>1000 Hz (Wired) / 90 Hz (BT)</span></li>
+                  <li><span>Battery</span><span>4000mAh Rechargeable Li-polymer</span></li>
+                  <li><span>Dimensions</span><span>327.5 × 145 × 35.8 mm (1724g)</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-toggle" aria-expanded="false">
+                <span><span class="material-symbols-outlined">local_shipping</span> Shipping &amp; 30-Day Returns</span>
+                <span class="material-symbols-outlined chevron">expand_more</span>
+              </button>
+              <div class="acc-content">
+                <p>Dispatches within 24 hours directly from Keychron Regional Atelier Hubs. Standard deliveries arrive in 2-4 business days with end-to-end tracked courier.</p>
+                <p>30-Day Zero Risk Return policy: if unopened or manufacturer defective, a full refund is guaranteed with a prepaid return label.</p>
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-toggle" aria-expanded="false">
+                <span><span class="material-symbols-outlined">verified</span> SeCondary Seller Assurance</span>
+                <span class="material-symbols-outlined chevron">expand_more</span>
+              </button>
+              <div class="acc-content">
+                <p>Direct Merchant Escrow guarantee: payment is released to the merchant only upon delivery confirmation. 2-Year Official Global hardware warranty included.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Reviews ===== -->
+      <section class="panel reviews">
+        <div class="panel-head">
+          <div>
+            <small class="eyebrow">Verified Community Experience</small>
+            <h2>Ratings &amp; Field Reviews</h2>
+          </div>
+          <button class="btn-small" id="writeReview">
+            <span class="material-symbols-outlined">rate_review</span> Write a Review
+          </button>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="rating-box">
+            <div class="score"><b>4.9</b> <span>/ 5.0</span></div>
+            <div class="stars">★★★★★ <small>98% Recommended</small></div>
+            <div class="bar"><span>5★</span><div><i style="width:88%"></i></div><span>88%</span></div>
+            <div class="bar"><span>4★</span><div><i style="width:9%"></i></div><span>9%</span></div>
+            <div class="bar"><span>3★</span><div><i style="width:2%"></i></div><span>2%</span></div>
+            <div class="bar"><span>2★</span><div><i style="width:1%"></i></div><span>1%</span></div>
+          </div>
+
+          <div class="review-list">
+            <article class="review">
+              <div class="review-head">
+                <div class="reviewer">
+                  <span class="avatar-sm">JV</span> <b>Jessica Val</b>
+                  <span class="tag">Verified Buyer</span>
+                </div>
+                <small>3 days ago</small>
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>"Guys, I highly recommend!  Arrived two days early, well packaged, and exactly as described. The seller answered within an hour!"</p>
+            <article class="review">
+              <div class="review-head">
+                <div class="reviewer">
+                  <span class="avatar-sm alt">CL</span> <b>Claire L.</b>
+                  <span class="tag">Verified Buyer</span>
+                </div>
+                <small>1 week ago</small>
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>"The tracking updates were accurate at every step, and it arrived exactly on the day they said. 
+              For typing sounds deep and satisfying. For under $200, it beats keyboards that cost much more. Totally worth the price! "</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Complete the setup ===== -->
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <small class="eyebrow accent">Curated Complement</small>
+            <h2>Complete the Setup</h2>
+          </div>
+          <a href="#" class="link">View Desk Ecosystem ›</a>
+        </div>
+
+        <div class="product-grid">
+          <article class="card">
+            <div class="card-img">
+
+              <!-- IMAGE: accessory 1 -->
+              <img src="images.pdd/accessory-1.jpg" alt="Walnut Palm Rest" />
+              <span class="chip">Ergonomic</span>
+            </div>
+            <h3>Natural Walnut Palm Rest (Q1 Fit)</h3>
+            <p>Solid hardwood • Anti-slip feet</p>
+            <div class="card-foot">
+              <span class="card-price">$28.00</span>
+              <button class="add-accessory" data-name="Walnut Palm Rest" data-price="28" aria-label="Add accessory">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+
+              <!-- IMAGE: accessory 2 -->
+              <img src="images.pdd/accessory-2.jpg" alt="Coiled Aviator Cable" />
+              <span class="chip">Braided</span>
+            </div>
+            <h3>Custom Aviator Coiled Type-C Cable</h3>
+            <p>Zinc alloy GX16 • Double-sleeved</p>
+            <div class="card-foot">
+              <span class="card-price">$24.00</span>
+              <button class="add-accessory" data-name="Coiled Aviator Cable" data-price="24" aria-label="Add accessory">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+
+              <!-- IMAGE: accessory 3 -->
+              <img src="images.pdd/accessory-3.jpg" alt="Merino Felt Desk Pad" />
+              <span class="chip">Desk Pad</span>
+            </div>
+            <h3>Dual-Tone Merino Felt Desk Pad (90x40cm)</h3>
+            <p>Acoustic dampening • Vegan base</p>
+            <div class="card-foot">
+              <span class="card-price">$34.00</span>
+              <button class="add-accessory" data-name="Merino Felt Desk Pad" data-price="34" aria-label="Add accessory">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+
+              <!-- IMAGE: accessory 4 -->
+              <img src="images.pdd/accessory-4.jpg" alt="Switch and Keycap Puller" />
+              <span class="chip">Maintenance</span>
+            </div>
+            <h3>Titanium-Coated Switch &amp; Keycap Puller</h3>
+            <p>Zero scratch wire • Hot-swap tool</p>
+            <div class="card-foot">
+              <span class="card-price">$12.00</span>
+              <button class="add-accessory" data-name="Switch &amp; Keycap Puller" data-price="12" aria-label="Add accessory">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+          <!-- FOOTER -->
+          <br/>
+          <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Se<span>Condary</span></a>
+                    <p>A New Home for Old Things.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Shopping</h3>
+                    <a href="index.html#categories">Categories</a>
+                    <a href="browseproduct.html">Featured Products</a>
+                    <a href="browseproduct.html">New Arrivals</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>For Sellers</h3>
+                    <a href="sell-item.html">Sell an Item</a>
+                    <a href="sell-item.html">Start Selling</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SeCondary. All rights reserved.</p>
+                <p>Made for better shopping experiences.</p>
+            </div>
+        </footer>
+
+  </body>
+</html>
